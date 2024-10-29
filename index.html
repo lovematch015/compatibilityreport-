@@ -8,10 +8,39 @@
     <title>[Latest Update Article of 2024] ESFJs and INFPs are not typically seen as a natural match. Exploring Real-Life Dynamics and Positive Possibilitie</title>
 </head>
 <body>
-    <h1>[Latest Update Article of 2024] ESFJs and INFPs are not typically seen as a natural match. Exploring Real-Life Dynamics and Positive Possibilitier</h1>
-    <textarea id="codeEditor" placeholder="여기에 코드를 작성하세요"></textarea>
-    <button onclick="clearCode()">저장된 코드 지우기</button>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Accidental Deletion</title>
+    <style>
+        /* Styling for clarity */
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        input[type="text"] { width: 100%; padding: 10px; margin-bottom: 10px; }
+        button { padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <!-- Text input field -->
+    <input type="text" id="textInput" placeholder="Type something here...">
+    
+    <!-- Button to clear the input -->
+    <button onclick="clearText()">Clear</button>
+    
+    <!-- JavaScript to prevent accidental deletion -->
+    <script>
+        function clearText() {
+            // Confirm with the user before clearing
+            const userConfirmed = confirm("Are you sure you want to clear the text?");
+            
+            if (userConfirmed) {
+                // Clear the text only if the user confirmed
+                document.getElementById("textInput").value = "";
+            }
+        }
+    </script>
 
-    <script src="script.js"></script>
 </body>
 </html>
+

@@ -1,305 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Updated 2024 | INFP and ESFJ: Exploring Relationship Dynamics and Positive Possibilities</title>
     <style>
-        :root {
-            --primary-color: #6366f1;
-            --secondary-color: #818cf8;
-            --text-color: #4b5563;
-            --border-color: #e5e7eb;
-            --background-color: #ffffff;
-            --hover-color: #f8fafc;
-            --shadow-color: rgba(0, 0, 0, 0.05);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
-            background-color: #f3f4f6;
-        }
-
-        .container {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 20px;
         }
-
-        header {
-            background: linear-gradient(135deg, #818cf8, #6366f1);
-            padding: 4rem 0;
-            margin-bottom: 2rem;
+        .header {
             text-align: center;
-            border-radius: 0 0 30px 30px;
-            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.15);
+            margin-bottom: 30px;
         }
-
-        header h1 {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
+        .section {
+            margin-bottom: 20px;
         }
-
-        header p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1rem;
-        }
-
-        .accordion-section {
-            margin-bottom: 1.5rem;
-            border-radius: 16px;
-            overflow: hidden;
-            background: var(--background-color);
-            box-shadow: 0 4px 6px var(--shadow-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .accordion-section:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 12px var(--shadow-color);
-        }
-
-        .accordion-header {
-            background: var(--background-color);
-            padding: 1.5rem 2rem;
+        .section-header {
+            background-color: #f0f0f0;
+            padding: 10px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background-color 0.3s ease;
-            border-bottom: 1px solid var(--border-color);
+            border-radius: 5px;
         }
-
-        .accordion-header:hover {
-            background-color: var(--hover-color);
+        .section-content {
+            padding: 15px;
+            display: none;
         }
-
-        .accordion-header h2 {
-            margin: 0;
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            font-weight: 600;
+        .section-content.active {
+            display: block;
         }
-
-        .accordion-content {
-            background: var(--background-color);
-            padding: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease-out;
+        .section-content ul {
+            padding-left: 20px;
         }
-
-        .accordion-content.active {
-            max-height: 2000px;
-            padding: 2rem;
-        }
-
-        .accordion-icon {
-            width: 24px;
-            height: 24px;
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .accordion-icon::before,
-        .accordion-icon::after {
-            content: '';
-            position: absolute;
-            background-color: var(--primary-color);
-            border-radius: 2px;
-            transition: transform 0.3s ease;
-        }
-
-        .accordion-icon::before {
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            transform: translateY(-50%);
-        }
-
-        .accordion-icon::after {
-            top: 0;
-            left: 50%;
-            width: 2px;
-            height: 100%;
-            transform: translateX(-50%);
-        }
-
-        .accordion-header.active .accordion-icon::after {
-            transform: translateX(-50%) rotate(90deg);
-            opacity: 0;
-        }
-
-        .list-item {
-            margin-bottom: 1.2rem;
-            padding-left: 1.8rem;
-            position: relative;
-        }
-
-        .list-item:before {
-            content: "•";
-            color: var(--secondary-color);
-            position: absolute;
-            left: 0;
-            font-size: 1.2rem;
-        }
-
-        .highlight-box {
-            background-color: #f5f3ff;
-            border-left: 4px solid var(--primary-color);
-            padding: 1.8rem;
-            margin: 1.5rem 0;
-            border-radius: 0 12px 12px 0;
-        }
-
-        .highlight-box h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
         .footer {
             text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-            color: var(--text-color);
-            font-size: 0.9rem;
-            background: var(--background-color);
-            border-radius: 16px;
-            box-shadow: 0 4px 6px var(--shadow-color);
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
         }
-
-        strong {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            header {
-                padding: 3rem 0;
-            }
-            
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .accordion-header {
-                padding: 1.2rem 1.5rem;
-            }
-
-            .accordion-content.active {
-                padding: 1.5rem;
-            }
+        .toggle-icon {
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Updated 2024 | INFP and ESFJ: Exploring Relationship Dynamics and Positive Possibilities</h1>
-            <p>Understanding Relationship Dynamics</p>
-        </div>
-    </header>
+    <div class="header">
+        <h1>Updated 2024 | INFP and ESFJ: Exploring Relationship Dynamics and Positive Possibilities</h1>
+    </div>
 
-    <main class="container">
-        <div class="accordion-section">
-            <div class="accordion-header">
-                <h2>Introduction</h2>
-                <div class="accordion-icon"></div>
-            </div>
-            <div class="accordion-content">
-                <p>While INFPs and ESFJs are not a natural match, this does not mean their relationship is doomed. Like any relationship, it can develop into something meaningful with interest and effort. They are theoretically considered to have a moderately good relationship. This article explores the dynamics of the ESFJ-INFP relationship, acknowledging common challenges while highlighting ways to form a harmonious bond.</p>
-            </div>
+    <div class="section">
+        <div class="section-header" onclick="toggleSection('understanding')">
+            <h2>Understanding Relationship Dynamics</h2>
+            <span class="toggle-icon">+</span>
         </div>
-
-        <div class="accordion-section">
-            <div class="accordion-header">
-                <h2>Why they're not a natural match</h2>
-                <div class="accordion-icon"></div>
-            </div>
-            <div class="accordion-content">
-                <p>The ESFJ and INFP personality types can face challenges in a relationship due to their contrasting approaches and values. Here are some key differences:</p>
-                <ul>
-                    <li class="list-item"><strong>Different Emotional Needs:</strong> ESFJs seek validation through actions, INFPs prefer deep emotional connections.</li>
-                    <li class="list-item"><strong>Conflict Handling:</strong> ESFJs confront directly, INFPs need processing time.</li>
-                    <li class="list-item"><strong>Social Preferences:</strong> ESFJs are more social, INFPs need more alone time.</li>
-                    <li class="list-item"><strong>Value Differences:</strong> ESFJs prioritize harmony and structure, INFPs value individuality.</li>
-                </ul>
-            </div>
+        <div id="understanding" class="section-content">
+            <h3>Introduction</h3>
+            <p>INFPs and ESFJs are not natural pairs, but that doesn't mean their relationship is doomed. Like any relationship, it can evolve into something meaningful with care and effort. They are generally considered to have a moderately good relationship. This article explores the dynamics between ESFJ and INFP, acknowledging common challenges while highlighting ways to build harmonious bonds.</p>
         </div>
+    </div>
 
-        <div class="accordion-section">
-            <div class="accordion-header">
-                <h2>Socionics Perspective</h2>
-                <div class="accordion-icon"></div>
-            </div>
-            <div class="accordion-content">
-                <p>In Socionics, the ESFJ-INFP pairing is classified as an "Illusionary Relationship."</p>
-                <div class="highlight-box">
-                    <h3>Key Points</h3>
-                    <ul>
-                        <li class="list-item">Classified as "Illusionary Relationship"</li>
-                        <li class="list-item">Comfortable but lacking deep understanding</li>
-                        <li class="list-item">Different motivations make shared goals difficult</li>
-                        <li class="list-item">Activities may seem meaningless to the other partner</li>
-                    </ul>
-                </div>
-            </div>
+    <div class="section">
+        <div class="section-header" onclick="toggleSection('notNatural')">
+            <h2>Why They Are Not Natural Match</h2>
+            <span class="toggle-icon">+</span>
         </div>
-
-        <div class="accordion-section">
-            <div class="accordion-header">
-                <h2>Maintaining a Healthy Relationship </h2>
-                <div class="accordion-icon"></div>
-            </div>
-            <div class="accordion-content">
-                <p>Despite these challenges, the INFP-ESFJ relationship holds potential. Here are ways to maintain a healthy relationship:</p>
-                <ul>
-                    <li class="list-item"><strong>Focus on Joint Care:</strong> Both types value others' well-being</li>
-                    <li class="list-item"><strong>Embrace Strengths:</strong> Learn from each other's approaches</li>
-                    <li class="list-item"><strong>Respect Differences:</strong> Give space when needed</li>
-                    <li class="list-item"><strong>Impersonal Conflict Resolution:</strong> Address issues objectively</li>
-                </ul>
-            </div>
+        <div id="notNatural" class="section-content">
+            <p>The ESFJ and INFP personality types can face difficulties in their relationship due to their contrasting approaches and values. Here are some key differences:</p>
+            <ul>
+                <li>Different Emotional Needs: ESFJs seek affirmation through action, while INFPs prefer deep emotional connections.</li>
+                <li>Conflict Resolution: ESFJs confront issues directly, whereas INFPs need time to process.</li>
+                <li>Social Preferences: ESFJs are more sociable, while INFPs require more time alone.</li>
+                <li>Value Differences: ESFJs prioritize harmony and structure, while INFPs value individuality.</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="accordion-section">
-            <div class="accordion-header">
-                <h2>Conclusion</h2>
-                <div class="accordion-icon"></div>
-            </div>
-            <div class="accordion-content">
-                <p>INFPs and ESFJs may not be natural matches, but they can develop lasting relationships through empathy, effort, and mutual understanding. Although they are not natural pairs, mutual respect and understanding can lead to complementary dynamics. Relationships are complex, and no theory can fully capture them. Trust in your unique bond and work together to thrive!</p>
-            </div>
+    <div class="section">
+        <div class="section-header" onclick="toggleSection('socionics')">
+            <h2>Socionics Perspective</h2>
+            <span class="toggle-icon">+</span>
         </div>
+        <div id="socionics" class="section-content">
+            <p>From a sociological standpoint, the ESFJ-INFP pair is classified as an "Illusionary Relationship."</p>
+            <h4>Key Points</h4>
+            <ul>
+                <li>Classified as an "Illusionary Relationship"</li>
+                <li>Comfortable but lacking deep understanding</li>
+                <li>Different motivations make shared goals challenging</li>
+                <li>Activities may seem meaningless to the other</li>
+            </ul>
+        </div>
+    </div>
 
-        <footer class="footer">
-            <p>© 2024 INFP-ESFJ Compatibility Report | This article is based on well-established theories and aims to provide clarity.</p>
-        </footer>
-    </main>
+    <div class="section">
+        <div class="section-header" onclick="toggleSection('supervision')">
+            <h2>Are ESFJs and INFP really a supervisory relationship? No.</h2>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div id="supervision" class="section-content">
+            <h4>1. MBTI to Socionics Translation:</h4>
+            <ul>
+                <li>ESFJ (MBTI) → ESFj or ESE (Socionics)</li>
+                <li>INFP (MBTI) → INFj or EII (Socionics)</li>
+                <li>Note: The j/p switch occurs only for introverts in translation</li>
+            </ul>
+
+            <h4>2. Function Stack Analysis:</h4>
+            <p>ESFj (ESE):</p>
+            <ul>
+                <li>Base (Leading): Fe</li>
+                <li>Creative: Si</li>
+                <li>Role: Ni</li>
+                <li>Vulnerable: Te</li>
+                <li>Ignoring: Fi</li>
+                <li>Demonstrative: Se</li>
+                <li>Hidden Agenda: Ti</li>
+                <li>PoLR: Ne</li>
+            </ul>
+
+            <p>INFj (EII):</p>
+            <ul>
+                <li>Base (Leading): Fi</li>
+                <li>Creative: Ne</li>
+                <li>Role: Se</li>
+                <li>Vulnerable: Ti</li>
+                <li>Ignoring: Fe</li>
+                <li>Demonstrative: Ni</li>
+                <li>Hidden Agenda: Te</li>
+                <li>PoLR: Si</li>
+            </ul>
+
+            <h4>3. Supervision Relationship Requirements:</h4>
+            <p>For a supervision relationship:</p>
+            <ul>
+                <li>Supervisor's Base function = Supervisee's Ignoring function</li>
+                <li>Supervisor's Creative function = Supervisee's Role function</li>
+                <li>Information elements must flow in a specific direction</li>
+            </ul>
+
+            <h4>4. Why Socionics ESFj type (MBTI ESFJ type) and Socionics INFj type (MBTI INFP Type) are NOT in Supervision:</h4>
+            <ul>
+                <li>ESFj's Base (Fe) ≠ INFj's Ignoring (Fe)</li>
+                <li>ESFj's Creative (Si) ≠ INFj's Role (Se)</li>
+                <li>The function orientations don't match the required pattern</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header" onclick="toggleSection('goodRelationship')">
+            <h2>Why This Can Be a Moderately Good Relationship</h2>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div id="goodRelationship" class="section-content">
+            <ol>
+                <li>Complementary Strengths: ESFJs are typically extroverted, organized, and socially aware, while INFPs are introspective, creative, and idealistic. This combination allows them to balance each other; ESFJs can help INFPs engage more with the outside world, while INFPs offer depth and emotional insight to ESFJs.</li>
+                <li>Shared Values: Both types often prioritize relationships and personal values. ESFJs are nurturing and supportive, making them sensitive to others' feelings, which resonates with the INFP's desire for authenticity and emotional connection.</li>
+                <li>Mutual Support: INFPs appreciate the loyalty and commitment that ESFJs bring to relationships, while ESFJs value the deep understanding and empathy of INFPs. This mutual support fosters a strong emotional bond.</li>
+                <li>Effective Communication: ESFJs are typically more expressive and can help INFPs articulate their feelings. Meanwhile, INFPs encourage ESFJs to slow down and reflect on their emotions, enhancing communication and understanding.</li>
+                <li>Growth Opportunities: ESFJs can help INFPs with practical matters and social interactions, while INFPs can encourage ESFJs to explore their inner thoughts and feelings, promoting personal growth for both partners.</li>
+                <li>Shared Goals: Both types often have a strong desire to make a positive impact on the world, which can lead to shared goals and collaborative efforts in various pursuits, enhancing their connection and shared sense of purpose.</li>
+            </ol>
+            <p>Overall, the dynamic between ESFJs and INFPs can create a nurturing, supportive, and enriching relationship, allowing both partners to thrive.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header" onclick="toggleSection('maintaining')">
+            <h2>Maintaining a Healthy Relationship</h2>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div id="maintaining" class="section-content">
+            <p>Despite these challenges, the INFP-ESFJ relationship holds potential. Here are ways to maintain a healthy relationship:</p>
+            <ul>
+                <li>Focus on Joint Care: Both types value the well-being of others.</li>
+                <li>Embrace Strengths: Learn from each other's approaches.</li>
+                <li>Respect Differences: Give space when necessary.</li>
+                <li>Impersonal Conflict Resolution: Address issues objectively.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header" onclick="toggleSection('conclusion')">
+            <h2>Conclusion</h2>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div id="conclusion" class="section-content">
+            <p>INFPs and ESFJs may not be a natural combination, but through empathy, effort, and mutual understanding, they can develop a lasting relationship. While they are not a natural pair, mutual respect and understanding can lead to complementary dynamics. Relationships are complex, and no theory can capture this fully. Trust in your unique bond and work together to thrive!</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2024 INFP-ESFJ Compatibility Report | This article is based on well-established theories and aims to provide clarity.
+    </div>
 
     <script>
-        document.querySelectorAll('.accordion-header').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                button.classList.toggle('active');
-                content.classList.toggle('active');
-            });
-        });
+        function toggleSection(id) {
+            const content = document.getElementById(id);
+            const header = content.previousElementSibling;
+            const icon = header.querySelector('.toggle-icon');
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                icon.textContent = '+';
+            } else {
+                content.classList.add('active');
+                icon.textContent = '-';
+            }
+        }
     </script>
 </body>
 </html>

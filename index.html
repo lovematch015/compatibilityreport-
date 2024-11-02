@@ -10,71 +10,58 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
             max-width: 800px;
             margin: 0 auto;
-            background-color: #f5f5f5;
-        }
-
-        .container {
-            background-color: white;
+            background: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
-        h1, h2, h3 {
+        h1, h2 {
             color: #2c3e50;
-            margin-top: 30px;
-        }
-
-        h1 {
-            font-size: 2em;
-            text-align: center;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid #eee;
             padding-bottom: 10px;
         }
-
-        .content {
+        .section {
+            margin: 20px 0;
             display: none;
-            margin-top: 20px;
         }
-
-        button {
+        .section.active {
             display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #3498db;
+        }
+        .btn {
+            background: #3498db;
             color: white;
             border: none;
+            padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
+            margin: 5px;
+            transition: background 0.3s;
         }
-
-        button:hover {
-            background-color: #2980b9;
+        .btn:hover {
+            background: #2980b9;
         }
-
-        .section {
-            margin-bottom: 30px;
+        .challenges-list {
+            list-style-type: none;
+            padding: 0;
         }
-
-        ul, ol {
-            padding-left: 20px;
+        .challenges-list li {
+            background: #f8f9fa;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
         }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .footer {
+        .copyright {
             text-align: center;
             margin-top: 30px;
-            font-size: 0.9em;
+            font-size: 0.8em;
             color: #666;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
         }
     </style>
 </head>
@@ -82,139 +69,85 @@
     <div class="container">
         <h1>Updated 2024 | INFP and ESFJ: Exploring Relationship Dynamics and Positive Possibilities</h1>
         
-        <button onclick="toggleContent()">Show Content</button>
+        <div>
+            <button class="btn" onclick="showSection('intro')">Introduction</button>
+            <button class="btn" onclick="showSection('notNatural')">Why Not Natural Match</button>
+            <button class="btn" onclick="showSection('socionics')">Socionics Perspective</button>
+            <button class="btn" onclick="showSection('positive')">Positive Possibilities</button>
+            <button class="btn" onclick="showSection('maintaining')">Maintaining Relationship</button>
+            <button class="btn" onclick="showSection('conclusion')">Conclusion</button>
+        </div>
 
-        <div id="content" class="content">
-            <div class="section">
-                <h2>Understanding Relationship Dynamics</h2>
-            </div>
+        <div id="intro" class="section">
+            <h2>Introduction</h2>
+            <p>INFPs and ESFJs are not natural pairs, but that doesn't mean their relationship is doomed. Like any relationship, it can evolve into something meaningful with care and effort. They are generally considered to have a moderately good relationship. This article explores the dynamics between ESFJ and INFP, acknowledging common challenges while highlighting ways to build harmonious bonds.</p>
+        </div>
 
-            <div class="section">
-                <h2>Introduction</h2>
-                <p>INFPs and ESFJs are not natural pairs, but that doesn't mean their relationship is doomed. Like any relationship, it can evolve into something meaningful with care and effort. They are generally considered to have a moderately good relationship. This article explores the dynamics between ESFJ and INFP, acknowledging common challenges while highlighting ways to build harmonious bonds.</p>
-            </div>
+        <div id="notNatural" class="section">
+            <h2>Why They Are Not Natural Match</h2>
+            <ul class="challenges-list">
+                <li><strong>Different Emotional Needs:</strong> ESFJs seek affirmation through action, while INFPs prefer deep emotional connections.</li>
+                <li><strong>Conflict Resolution:</strong> ESFJs confront issues directly, whereas INFPs need time to process.</li>
+                <li><strong>Social Preferences:</strong> ESFJs are more sociable, while INFPs require more time alone.</li>
+                <li><strong>Value Differences:</strong> ESFJs prioritize harmony and structure, while INFPs value individuality.</li>
+            </ul>
+        </div>
 
-            <div class="section">
-                <h2>Why They Are Not Natural Match</h2>
-                <p>The ESFJ and INFP personality types can face difficulties in their relationship due to their contrasting approaches and values. Here are some key differences:</p>
-                <ul>
-                    <li>Different Emotional Needs: ESFJs seek affirmation through action, while INFPs prefer deep emotional connections.</li>
-                    <li>Conflict Resolution: ESFJs confront issues directly, whereas INFPs need time to process.</li>
-                    <li>Social Preferences: ESFJs are more sociable, while INFPs require more time alone.</li>
-                    <li>Value Differences: ESFJs prioritize harmony and structure, while INFPs value individuality.</li>
-                </ul>
-            </div>
+        <div id="socionics" class="section">
+            <h2>Socionics Perspective</h2>
+            <p>From a sociological standpoint, the ESFJ-INFP pair is classified as an "Illusionary Relationship."</p>
+            <ul class="challenges-list">
+                <li>Classified as an "Illusionary Relationship"</li>
+                <li>Comfortable but lacking deep understanding</li>
+                <li>Different motivations make shared goals challenging</li>
+                <li>Activities may seem meaningless to the other</li>
+            </ul>
+        </div>
 
-            <div class="section">
-                <h2>Socionics Perspective</h2>
-                <p>From a sociological standpoint, the ESFJ-INFP pair is classified as an "Illusionary Relationship."</p>
-                <p>Socionics ESFj(MBTI ESFJ)-Socionics INFj(MBTI INFP) Illusionary relationship</p>
-                <p>Key Points:</p>
-                <ul>
-                    <li>Classified as an "Illusionary Relationship"</li>
-                    <li>Comfortable but lacking deep understanding</li>
-                    <li>Different motivations make shared goals challenging</li>
-                    <li>Activities may seem meaningless to the other</li>
-                </ul>
-            </div>
+        <div id="positive" class="section">
+            <h2>Why This Can Be a Moderately Good Relationship</h2>
+            <ul class="challenges-list">
+                <li><strong>Complementary Strengths:</strong> ESFJs are typically extroverted, organized, and socially aware, while INFPs are introspective, creative, and idealistic.</li>
+                <li><strong>Shared Values:</strong> Both types often prioritize relationships and personal values.</li>
+                <li><strong>Mutual Support:</strong> INFPs appreciate the loyalty and commitment that ESFJs bring to relationships.</li>
+                <li><strong>Effective Communication:</strong> ESFJs are typically more expressive and can help INFPs articulate their feelings.</li>
+                <li><strong>Growth Opportunities:</strong> ESFJs can help INFPs with practical matters and social interactions.</li>
+                <li><strong>Shared Goals:</strong> Both types often have a strong desire to make a positive impact on the world.</li>
+            </ul>
+        </div>
 
-            <div class="section">
-                <h2>Are ESFJs and INFP really a supervisory relationship? No.</h2>
-                <h3>1. MBTI to Socionics Translation:</h3>
-                <ul>
-                    <li>ESFJ (MBTI) → ESFj or ESE (Socionics)</li>
-                    <li>INFP (MBTI) → INFj or EII (Socionics)</li>
-                    <li>Note: The j/p switch occurs only for introverts in translation</li>
-                </ul>
+        <div id="maintaining" class="section">
+            <h2>Maintaining a Healthy Relationship</h2>
+            <ul class="challenges-list">
+                <li><strong>Focus on Joint Care:</strong> Both types value the well-being of others.</li>
+                <li><strong>Embrace Strengths:</strong> Learn from each other's approaches.</li>
+                <li><strong>Respect Differences:</strong> Give space when necessary.</li>
+                <li><strong>Impersonal Conflict Resolution:</strong> Address issues objectively.</li>
+            </ul>
+        </div>
 
-                <h3>2. Function Stack Analysis:</h3>
-                <p>ESFj (ESE):</p>
-                <ul>
-                    <li>Base (Leading): Fe</li>
-                    <li>Creative: Si</li>
-                    <li>Role: Ni</li>
-                    <li>Vulnerable: Te</li>
-                    <li>Ignoring: Fi</li>
-                    <li>Demonstrative: Se</li>
-                    <li>Hidden Agenda: Ti</li>
-                    <li>PoLR: Ne</li>
-                </ul>
-
-                <p>INFj (EII):</p>
-                <ul>
-                    <li>Base (Leading): Fi</li>
-                    <li>Creative: Ne</li>
-                    <li>Role: Se</li>
-                    <li>Vulnerable: Ti</li>
-                    <li>Ignoring: Fe</li>
-                    <li>Demonstrative: Ni</li>
-                    <li>Hidden Agenda: Te</li>
-                    <li>PoLR: Si</li>
-                </ul>
-
-                <h3>3. Supervision Relationship Requirements:</h3>
-                <p>For a supervision relationship:</p>
-                <ul>
-                    <li>Supervisor's Base function = Supervisee's Ignoring function</li>
-                    <li>Supervisor's Creative function = Supervisee's Role function</li>
-                    <li>Information elements must flow in a specific direction</li>
-                </ul>
-
-                <h3>4. Why Socionics ESFj type (MBTI ESFJ type) and Socionics INFj type (MBTI INFP Type) are NOT in Supervision:</h3>
-                <ul>
-                    <li>ESFj's Base (Fe) ≠ INFj's Ignoring (Fe)</li>
-                    <li>ESFj's Creative (Si) ≠ INFj's Role (Se)</li>
-                    <li>The function orientations don't match the required pattern</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Why This Can Be a Moderately Good Relationship</h2>
-                <ol>
-                    <li>Complementary Strengths: ESFJs are typically extroverted, organized, and socially aware, while INFPs are introspective, creative, and idealistic. This combination allows them to balance each other; ESFJs can help INFPs engage more with the outside world, while INFPs offer depth and emotional insight to ESFJs.</li>
-                    <li>Shared Values: Both types often prioritize relationships and personal values. ESFJs are nurturing and supportive, making them sensitive to others' feelings, which resonates with the INFP's desire for authenticity and emotional connection.</li>
-                    <li>Mutual Support: INFPs appreciate the loyalty and commitment that ESFJs bring to relationships, while ESFJs value the deep understanding and empathy of INFPs. This mutual support fosters a strong emotional bond.</li>
-                    <li>Effective Communication: ESFJs are typically more expressive and can help INFPs articulate their feelings. Meanwhile, INFPs encourage ESFJs to slow down and reflect on their emotions, enhancing communication and understanding.</li>
-                    <li>Growth Opportunities: ESFJs can help INFPs with practical matters and social interactions, while INFPs can encourage ESFJs to explore their inner thoughts and feelings, promoting personal growth for both partners.</li>
-                    <li>Shared Goals: Both types often have a strong desire to make a positive impact on the world, which can lead to shared goals and collaborative efforts in various pursuits, enhancing their connection and shared sense of purpose.</li>
-                </ol>
-            </div>
-
-            <div class="section">
-                <h2>Maintaining a Healthy Relationship</h2>
-                <p>Despite these challenges, the INFP-ESFJ relationship holds potential. Here are ways to maintain a healthy relationship:</p>
-                <ul>
-                    <li>Focus on Joint Care: Both types value the well-being of others.</li>
-                    <li>Embrace Strengths: Learn from each other's approaches.</li>
-                    <li>Respect Differences: Give space when necessary.</li>
-                    <li>Impersonal Conflict Resolution: Address issues objectively.</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Conclusion</h2>
-                <p>INFPs and ESFJs may not be a natural combination, but through empathy, effort, and mutual understanding, they can develop a lasting relationship. While they are not a natural pair, mutual respect and understanding can lead to complementary dynamics. Relationships are complex, and no theory can capture this fully. Trust in your unique bond and work together to thrive!</p>
-            </div>
-
-            <div class="footer">
-                © 2024 INFP-ESFJ Compatibility Report | This article is based on well-established theories and aims to provide clarity.
+        <div id="conclusion" class="section">
+            <h2>Conclusion</h2>
+            <p>INFPs and ESFJs may not be a natural combination, but through empathy, effort, and mutual understanding, they can develop a lasting relationship. While they are not a natural pair, mutual respect and understanding can lead to complementary dynamics. Relationships are complex, and no theory can capture this fully. Trust in your unique bond and work together to thrive!</p>
+            <div class="copyright">
+                <p>© 2024 INFP-ESFJ Compatibility Report | This article is based on well-established theories and aims to provide clarity.</p>
             </div>
         </div>
     </div>
 
     <script>
-        function toggleContent() {
-            var content = document.getElementById("content");
-            var button = document.querySelector("button");
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
             
-            if (content.style.display === "none" || content.style.display === "") {
-                content.style.display = "block";
-                button.textContent = "Hide Content";
-            } else {
-                content.style.display = "none";
-                button.textContent = "Show Content";
-            }
+            // Show selected section
+            document.getElementById(sectionId).style.display = 'block';
         }
+
+        // Show intro section by default
+        document.getElementById('intro').style.display = 'block';
     </script>
 </body>
 </html>
